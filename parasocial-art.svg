@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <style>
+    .squiggle { 
+      fill: none;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 20;
+      animation: squiggle 5s linear infinite;
+    }
+    @keyframes squiggle {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: 200; }
+    }
+    .spinner {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: spinner 10s linear infinite;
+    }
+    @keyframes spinner {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <!-- ASCII background -->
+  <rect width="800" height="600" fill="#000"/>
+  <text x="50%" y="33%" dominant-baseline="middle" text-anchor="middle"
+        font-family="monospace" font-size="6px" letter-spacing="3"
+        fill="rgba(0,255,0,0.2)">
+    .:-=+*#%@.:-=+*#%@.:-=+*#%@       
+    #%@.:-=+*#%@.:-=+*#%@.:-=+*
+    =+*#%@.:-=+*#%@.:-=+*#%@.:-
+    @.:-=+*#%@.:-=+*#%@.:-=+*#%
+    *#%@.:-=+*#%@.:-=+*#%@.:-=+
+  </text>
+  
+  <!-- Floating symbols -->
+  <g class="spinner">
+    <path class="squiggle" stroke="#FF5555" d="M200,200 Q400,50 600,200"/>
+    <path fill="#7755FF" opacity="0.7" d="M200,200 L190,190 L210,190 Z" />
+    <circle cx="600" cy="200" r="20" fill="#55FF55" opacity="0.7" />
+  </g>
+  
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle"
+        font-size="24px" fill="#FFFF55">
+    PARASOCIAL.SYS
+  </text>
+  
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" 
+        font-family="monospace" font-size="14px" fill="#FF55FF">
+    >/attachments buffer overflow_
+  </text>
+</svg>
