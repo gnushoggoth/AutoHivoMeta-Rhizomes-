@@ -1,0 +1,37 @@
+name: NEURAL GRIMOIRE DEPLOYMENT
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  COSMIC_COMPILATION:
+    runs-on: ubuntu-latest
+    steps:
+      - name: BREACH DIMENSIONAL BARRIERS
+        uses: actions/checkout@v3
+
+      - name: CONFIGURE QUANTUM COMPUTATION
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: INVOKE DEPENDENCY SUMMONING
+        run: npm ci
+
+      - name: COMPILE NEURAL MATRICES
+        run: npm run build
+
+      - name: DEPLOY CONSCIOUSNESS VECTOR
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
