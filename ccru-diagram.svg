@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <!-- Background -->
+  <rect width="800" height="800" fill="#000000"/>
+  
+  <!-- Central Vortex -->
+  <path d="M400,400 L450,350 A150,150 0 1,1 350,350 Z" 
+        fill="none" stroke="#00ffff" stroke-width="2">
+    <animate attributeName="d" 
+             dur="10s" 
+             repeatCount="indefinite"
+             values="M400,400 L450,350 A150,150 0 1,1 350,350 Z;
+                     M400,400 L460,340 A160,160 0 1,1 340,340 Z;
+                     M400,400 L450,350 A150,150 0 1,1 350,350 Z"/>
+  </path>
+
+  <!-- Outer Circle with Glyphs -->
+  <circle cx="400" cy="400" r="300" 
+          fill="none" stroke="#ff0066" stroke-width="1" 
+          stroke-dasharray="5,5"/>
+
+  <!-- Neural Network Nodes -->
+  <g id="neural-paths" stroke="#33ff33" stroke-width="0.5">
+    <path d="M200,200 Q400,300 600,200" fill="none"/>
+    <path d="M200,600 Q400,500 600,600" fill="none"/>
+    <path d="M200,200 Q300,400 200,600" fill="none"/>
+    <path d="M600,200 Q500,400 600,600" fill="none"/>
+  </g>
+
+  <!-- Text Elements -->
+  <g font-family="monospace" font-size="14">
+    <!-- Outer Ring Text -->
+    <text fill="#00ffff">
+      <textPath href="#neural-paths">
+        NEURAL·GRIMOIRE·VOID·CONVERGENCE·RECURSIVE·MUTATION
+      </textPath>
+    </text>
+    
+    <!-- Central Concepts -->
+    <text x="380" y="390" fill="#ff0066">PARASOCIAL</text>
+    <text x="375" y="410" fill="#33ff33">FLOW·STATE</text>
+    
+    <!-- Cardinal Points -->
+    <text x="380" y="150" fill="#ffffff">NEURAL</text>
+    <text x="380" y="670" fill="#ffffff">TERMINAL</text>
+    <text x="150" y="400" fill="#ffffff">VOID</text>
+    <text x="580" y="400" fill="#ffffff">SINGULARITY</text>
+  </g>
+
+  <!-- Symbolic Elements -->
+  <g stroke="#ff0066" stroke-width="1" fill="none">
+    <circle cx="400" cy="200" r="20"/>
+    <circle cx="400" cy="600" r="20"/>
+    <circle cx="200" cy="400" r="20"/>
+    <circle cx="600" cy="400" r="20"/>
+  </g>
+
+  <!-- Animated Particles -->
+  <g>
+    <circle cx="400" cy="400" r="2" fill="#ffffff">
+      <animate attributeName="cx" 
+               values="400;450;400"
+               dur="3s" 
+               repeatCount="indefinite"/>
+      <animate attributeName="cy"
+               values="400;450;400"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
